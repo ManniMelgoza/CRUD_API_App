@@ -6,6 +6,7 @@ const mongoose = require("mongoose");
 const productRoute = require("./Routes/product.route.js")
 // This is where all the data is located of the Product
 const Product = require("./models/productModel.js");
+
 require("dotenv").config();
 
 
@@ -23,6 +24,7 @@ app.use("/api/products", productRoute);
 
 // This will help connect the data
 mongoose.connect(
+  
    process.env.MONGO_URI
   )
   .then(() => {
